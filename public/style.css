@@ -1,0 +1,233 @@
+@font-face {
+  font-family: Tinkoff Sans;
+  src: url("/public/fonts/TinkoffSans-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-size: 24px;
+}
+@font-face {
+  font-family: Neue Haas Unica W1G;
+  src: url("/public/fonts/neuehaasunicaw1g-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: regular;
+}
+:root {
+  --font-tinkoff: "Tinkoff Sans", sans-serif;
+  --font-neue: "Neue Haas Unica W1G", sans-serif;
+  --bg-color: #FFFFFF;
+  --bg-gray: #F6F7F8;
+  --bg-yellow: rgba(255, 221, 45, 1);
+  --btn-bg: rgba(36, 74, 127, 0.06);
+  --text-gray: rgba(0, 0, 0, 0.54);
+  --text-black: rgba(0, 0, 0, 0.8);
+  --text-blue: rgba(18, 109, 247, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background-color: var(--bg-gray);
+  padding: 0;
+  font-family: var(--font-neue);
+  height: auto;
+}
+.header .navbar {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 16, 36, 0.12);
+}
+.header .left-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .left-side .logo {
+  width: 29px;
+  height: auto;
+}
+.header .left-side .search {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(36, 74, 127, 0.06);
+  color: var(--text-gray);
+  border: none;
+  width: 20rem;
+}
+.header .right-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+.header a:hover {
+  color: var(--text-black);
+}
+.header img {
+  width: 24px;
+  height: auto;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.post {
+  width: 82%;
+  height: auto;
+  background-color: var(--bg-color);
+  box-shadow: 0 6px 34px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+.post .post-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+.post .post-header img {
+  width: 24px;
+  height: auto;
+}
+.post .post-header h2 {
+  margin: 0;
+  font-family: var(--font-tinkoff);
+}
+.post .post-text {
+  padding: 0 1.3rem;
+  margin: 0;
+  font-family: var(--font-neue);
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.post .post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+.post .post-actions .like-btn {
+  width: 75px;
+  height: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--bg-yellow);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-black);
+  font-family: var(--font-neue);
+  cursor: pointer;
+}
+.post .post-actions .comment-btn {
+  width: 143px;
+  height: 44px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-blue);
+  font-family: var(--font-neue);
+  cursor: pointer;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem auto;
+  padding: 0;
+  width: 40%;
+  background-color: var(--bg-color);
+  box-shadow: 0 6px 34px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+}
+.register-container h2 {
+  font-family: var(--font-tinkoff);
+  color: var(--text-black);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin: 1.2rem;
+}
+.register-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.register-container .form input {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(36, 74, 127, 0.06);
+  color: var(--text-gray);
+  border: none;
+  width: 90%;
+  font-family: var(--font-neue);
+}
+.register-container .form .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 0 1.5rem;
+}
+.register-container .form .btns button {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-tinkoff);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.register-container .form .btns button.register-btn {
+  background-color: var(--bg-yellow);
+  color: rgb(51, 51, 51);
+}
+.register-container .form .btns button.register-btn:hover {
+  background-color: #efcf01;
+}
+.register-container .form .btns button.login-btn {
+  background-color: rgba(36, 74, 127, 0.06);
+  color: var(--text-blue);
+}
+.register-container .form .btns button.login-btn:hover {
+  background-color: rgba(36, 74, 127, 0.1);
+}
+
+/*# sourceMappingURL=style.css.map */
