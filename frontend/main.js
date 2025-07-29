@@ -25,7 +25,7 @@ async function loadPosts() {
 
             const avatarSrc = user.avatar?.trim()
                 ? user.avatar
-                : '/public/seneka 1.png';
+                : '/public/default-avatar.png';
 
             const postHTML = `
                 <article class="post">
@@ -53,12 +53,12 @@ function updateHeaderForAuth() {
 
     if (token) {
         rightSide.innerHTML = `
+            <a href='/frontend/index.html' id="logout-btn" style="all: --text-gray; unset; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                Выйти <img src="/public/arrow-in-right.svg" alt="">
+            </a>
             <a href="/frontend/profile.html">
                 <img src="/public/default-avatar.png" alt="Профиль" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer;">
             </a>
-            <button id="logout-btn" style="all: unset; cursor: pointer; display: flex; align-items: center; gap: 4px;">
-                Выйти <img src="/public/arrow-in-right.svg" alt="">
-            </button>
         `;
 
         document.getElementById('logout-btn').addEventListener('click', () => {

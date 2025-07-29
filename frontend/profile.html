@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="left-side">
+                <img src="/public/t-bank.svg" alt="Логотип" class="logo">
+                <input type="search" placeholder="Поиск по T-news" class="search">
+            </div>
+            <div class="right-side">
+                <div class="exit">
+                     <a href="/frontend/index.html">Выйти</a>
+                     <img src="/public/arrow-in-right.svg" alt="">
+                </div>
+                <a href="/frontend/profile.html"><img src="/public/default-avatar.png" alt=""></a>
+            </div>
+        </div>
+    </header>   
+
+    <main class="profile">
+        <section class="profile-info">
+            <div class="avatar-block">
+                <img src="/public/seneka.png" alt="" class="avatar">
+                <button class="edit-avatar">Изменить фото</button>
+            </div>
+            <div class="bio">
+                <h1>Луций Анней Сенека<button class="edit_name"><img src="/public/edit.svg" alt=""></button></h1>
+                <p>Обо мне: римский философ-стоик, поэт и государственный деятель. Воспитатель Нерона и один из крупнейших представителей стоицизма.<br>Сын Луция (Марка) Аннея Сенеки Старшего (выдающегося ритора и историка) и Гельвии, младший брат Юния Галлиона. Автор «Нравственных писем к Луцилию», ряда философских трактатов и трагедий
+                    <button class="edit_bio"><img src="/public/edit.svg" alt="" width="16px"></button>
+                </p>
+            </div>
+            <button class="subscribe">Подписаться</button>
+        </section>
+
+        <section class="new-post">
+            <textarea name="" id="" placeholder="Введите свой пост" class="new-post-text"></textarea>
+            <button class="create-post">Отправить</button>
+        </section>
+
+        <div class="posts-container">
+            <article class="post">
+                <div class="post-header">
+                    <img src="/public/default-avatar.png" alt="">
+                    <h2>Луций Анней Сенека</h2>
+                </div>
+                <p class="post-text">Человек, которого застеклённые окна защищали от малейшего дуновения, на чьих ногах постоянно менялись мягкие согревающие повязки, у кого в столовой под полом и в стенах всегда работало отопление, подвергается смертельной опасности, даже если его коснётся самый лёгкий ветерок.</p>
+                <div class="post-actions">
+                    <button class="like-btn"><img src="/public/Heart.svg" alt=""><span>21</span></button>
+                    <button class="comment-btn">Комментарии <span>1</span></button>
+                </div>
+            </article>
+        </div>
+    </main>    
+</body>
+</html>

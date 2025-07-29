@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: Neue Haas Unica W1G;
-    src: url('/public/fonts/neuehaasunicaw1g-regular.woff2') format('woff2');
+    src: url('/publi/fonts/neuehaasunicaw1g-regular.woff') format('woff2');
     font-weight: 400;
     font-style: regular;
 }
@@ -83,12 +83,22 @@ body {
     .right-side {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
+
+        .exit {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     }
 
     a {
         text-decoration: none;
         color: var(--text-gray);
+
+        img {
+            width: 32px;
+        }
     }
 
     a:hover {
@@ -106,7 +116,7 @@ body {
     flex-direction: column;
     align-items: center;
     // gap: 2rem;
-    margin-top: 4rem;
+    margin: 4rem 0;
 }
 
 .post {
@@ -262,4 +272,211 @@ body {
     }
 }
 
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 8rem auto;
+    padding: 0;
+    width: 40%;
+    background-color: var(--bg-color);
+    box-shadow: 0 6px 34px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
 
+    h2 {
+        font-family: var(--font-tinkoff);
+        color: var(--text-black);
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        text-align: center;
+        margin: 1.2rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        input {
+            margin: 0 0 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: rgba(36, 74, 127, 0.06);
+            color: var(--text-gray);
+            border: none;
+            width: 90%;
+            font-family: var(--font-neue);
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+            width: 90%;
+            margin: 0 0 1.5rem;
+
+            button {
+                flex: 1;
+                
+                padding: 1rem 0.5rem;
+                border-radius: 8px;
+                border: none;
+                font-family: var(--font-tinkoff);
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+
+                &.register-btn {
+                    background-color: rgba(36, 74, 127, 0.06);
+                    color: var(--text-blue);
+
+                    &:hover {
+                        background-color: rgba(36, 74, 127, 0.1);
+                    }
+                }
+
+                &.login-btn {
+                    background-color: var(--bg-yellow);
+                    color: rgba(51, 51, 51, 1);
+
+                    &:hover {
+                        background-color: #efcf01;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile {
+    margin: 0 auto;
+
+    .profile-info {
+        width: 82%;
+        height: auto;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        // flex-wrap: wrap;
+        margin: 2.5rem auto;
+
+        .avatar-block {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .avatar {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                border: 3px solid rgba(175, 242, 24, 1);
+                object-fit: cover;
+            }
+
+            .edit-avatar {
+                display: inline-block;
+                margin-top: 2rem;
+                padding: 0.5rem;
+                background-color: var(--text-blue);
+                color: white;
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                font-family: var(--font-neue);
+            }
+        }
+
+        .bio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1 {
+                font-family: var(--font-tinkoff);
+                margin: 0;
+                display: flex;
+                align-items: center;
+                
+                gap: 0.5rem;
+                flex-wrap: wrap;
+
+                .edit_name {
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    height: auto;
+                    background-color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                max-width: 100%;
+                margin: 0;
+                font-family: var(--font-neue);
+                color: var(--text-black);
+                line-height: 2rem;
+
+                .edit_bio {
+                    margin-bottom: 1.7rem;
+                    background-color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+            }  
+        }
+
+        .subscribe {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-color);
+            border: 1px solid rgba(0, 16, 36, 0.12);
+            color: var(--text-blue);
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.new-post{
+    width: 82%;
+    // max-width: 60rem;
+    margin: 2rem auto;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    // padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .new-post-text {
+        width: 100%;
+        resize: none;
+        border: none;
+        min-height: 10rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: #f3f3f3;
+        color: var(--text-gray);
+        margin-bottom: 1.5rem;
+        font-family: var(--font-neue);
+    }
+
+    .create-post {
+        background-color: var(--bg-yellow);
+        color: var(--text-black);
+        font-family: var(--font-neue);
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+    }
+}
